@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "public": true,
+  "builds": [{ "src": "frontend/index.html", "use": "@vercel/static" }],
+  "routes": [{ "src": "/(.*)", "dest": "/frontend/index.html" }]
+}
