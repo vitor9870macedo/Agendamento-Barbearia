@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agendamento Barbearia</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="chatbot-container">
+      <div id="chatbot"></div>
+      <form id="chat-form">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Digite sua resposta..."
+          autocomplete="off"
+          required
+        />
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+    <!-- Supabase CDN -->
+    <script type="module">
+      import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
+      window.supabaseCreateClient = createClient;
+    </script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
