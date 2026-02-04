@@ -69,7 +69,10 @@ function adicionarMensagem(texto, autor = "bot") {
   msg.className = `message ${autor}`;
   msg.textContent = texto;
   chatbot.appendChild(msg);
-  // Não faz scroll automático para o final, deixa o padrão do navegador
+  // Scroll automático para o final SEMPRE
+  setTimeout(() => {
+    chatbot.scrollTop = chatbot.scrollHeight;
+  }, 50);
 }
 
 // Função principal para avançar no fluxo de perguntas
